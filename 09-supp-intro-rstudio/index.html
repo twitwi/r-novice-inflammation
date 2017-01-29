@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2017-01-30 00:03:54 +0100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="/swc-releases/1999.12/r-novice-inflammation">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>Programming with R: Introduction to RStudio</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../conduct/">Code of Conduct</a></li>
+
+	
+        
+        <li><a href="../setup/">Setup</a></li>
+        <li><a href="../reference/">Reference</a></li>
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="../01-starting-with-data/">Analyzing Patient Data</a></li>
+            
+            <li><a href="../02-func-R/">Creating Functions</a></li>
+            
+            <li><a href="../03-loops-R/">Analyzing Multiple Data Sets</a></li>
+            
+            <li><a href="../04-cond/">Making Choices</a></li>
+            
+            <li><a href="../05-cmdline/">Command-Line Programs</a></li>
+            
+            <li><a href="../06-best-practices-R/">Best Practices for Writing R</a></li>
+            
+            <li><a href="../07-knitr-R/">Dynamic Reports with knitr</a></li>
+            
+            <li><a href="../08-making-packages-R/">Making Packages in R</a></li>
+            
+            <li><a href="../09-supp-intro-rstudio/">Introduction to RStudio</a></li>
+            
+            <li><a href="../10-supp-addressing-data/">Addressing Data</a></li>
+            
+            <li><a href="../11-supp-read-write-csv/">Reading and Writing CSV Files</a></li>
+            
+            <li><a href="../12-supp-factors/">Understanding Factors</a></li>
+            
+            <li><a href="../13-supp-data-structures/">Data Types and Structures</a></li>
+            
+            <li><a href="../14-supp-call-stack/">The Call Stack</a></li>
+            
+            <li><a href="../15-supp-loops-in-depth/">Loops in R</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="../about/">About</a></li>
+            
+            <li><a href="../discuss/">Discussion</a></li>
+            
+            <li><a href="../figures/">Figures</a></li>
+            
+            <li><a href="../guide/">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../license/">License</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div class="row">
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../08-making-packages-R/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-md-10">
+    
+    <h3 class="maintitle"><a href="../">Programming with R</a></h3>
+    <h1 class="maintitle">Introduction to RStudio</h1>
+    
+  </div>
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../10-supp-addressing-data/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 15 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How do I use the RStudio graphical user interface?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Get familiar with RStudio interface.</p>
+</li>
+	
+	<li><p>Understand the difference between script file and console.</p>
+</li>
+	
+	<li><p>Demonstrate useful shortcuts.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>Let’s start by learning about our tool.</p>
+
+<ul>
+  <li>Point to the different panels: Console, Scripts, Environments, Plots.</li>
+  <li>Code and workflow are more reproducible if we can document everything that we do.</li>
+  <li>Our end goal is not just to “do stuff” but to do it in a way that anyone can
+easily and exactly replicate our workflow and results.</li>
+  <li>The best way to achieve this is to write scripts. RStudio provides an
+environment that allows you to do that.</li>
+</ul>
+
+<h3 id="interacting-with-r">Interacting with R</h3>
+
+<p>There are two main ways of interacting with R: using the console or by using
+script files (plain text files that contain your code).</p>
+
+<p>The console window (in RStudio, the bottom left panel) is the place where R is
+waiting for you to tell it what to do, and where it will show the results of a
+command.  You can type commands directly into the console, but they will be
+forgotten when you close the session. It is better to enter the commands in the
+script editor, and save the script. This way, you have a complete record of what
+you did, you can easily show others how you did it and you can do it again later
+on if needed. You can copy-paste into the R console, but the Rstudio script
+editor allows you to ‘send’ the current line or the currently selected text to
+the R console using the <code class="highlighter-rouge">Ctrl-Enter</code> shortcut.</p>
+
+<p>At some point in your analysis you may want to check the content of variable or
+the structure of an object, without necessarily keep a record of it in your
+script. You can type these commands directly in the console. RStudio provides
+the <code class="highlighter-rouge">Ctrl-1</code> and <code class="highlighter-rouge">Ctrl-2</code> shortcuts allow you to jump between the script and the
+console windows.</p>
+
+<p>If R is ready to accept commands, the R console shows a <code class="highlighter-rouge">&gt;</code> prompt. If it
+receives a command (by typing, copy-pasting or sent from the script editor using
+<code class="highlighter-rouge">Ctrl-Enter</code>), R will try to execute it, and when ready, show the results and
+come back with a new <code class="highlighter-rouge">&gt;</code>-prompt to wait for new commands.</p>
+
+<p>If R is still waiting for you to enter more data because it isn’t complete yet,
+the console will show a <code class="highlighter-rouge">+</code> prompt. It means that you haven’t finished entering
+a complete command. This is because you have not ‘closed’ a parenthesis or
+quotation. If you’re in RStudio and this happens, click inside the console
+window and press <code class="highlighter-rouge">Esc</code>; this should help you out of trouble.</p>
+
+<h3 id="commenting">Commenting</h3>
+
+<p>Use <code class="highlighter-rouge">#</code> signs to comment. Comment liberally in your R scripts. Anything to the
+right of a <code class="highlighter-rouge">#</code> is ignored by R.</p>
+
+<h3 id="assignment-operator">Assignment Operator</h3>
+
+<p><code class="highlighter-rouge">&lt;-</code> is the assignment operator. It assigns values on the right to objects on
+the left. So, after executing <code class="highlighter-rouge">x &lt;- 3</code>, the value of <code class="highlighter-rouge">x</code> is <code class="highlighter-rouge">3</code>. The arrow can
+be read as 3 <strong>goes into</strong> <code class="highlighter-rouge">x</code>.  You can also use <code class="highlighter-rouge">=</code> for assignments but not in
+all contexts so it is good practice to use <code class="highlighter-rouge">&lt;-</code> for assignments. <code class="highlighter-rouge">=</code> should only
+be used to specify the values of arguments in functions, see below.</p>
+
+<p>In RStudio, typing <code class="highlighter-rouge">Alt + -</code> (push <code class="highlighter-rouge">Alt</code>, the key next to your space bar at the
+same time as the <code class="highlighter-rouge">-</code> key) will write ` &lt;- ` in a single keystroke.</p>
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Using RStudio can make programming in R much more productive.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+
+
+
+
+<div class="row">
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../08-making-packages-R/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-md-10">
+    
+  </div>
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../10-supp-addressing-data/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      <footer>
+  <div class="row">
+    <div class="col-md-6" align="left">
+      <h4>
+	Copyright &copy; 2016
+	<a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+      </h4>
+    </div>
+    <div class="col-md-6" align="right">
+      <h4>
+	<a href="/">Source</a>
+	/
+	<a href="/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+	/
+	<a href="mailto:lessons@software-carpentry.org">Contact</a>
+      </h4>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37305346-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
